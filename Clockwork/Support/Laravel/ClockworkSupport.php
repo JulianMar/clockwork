@@ -484,7 +484,8 @@ class ClockworkSupport
 	public function isEnabled()
 	{
 		return $this->getConfig('enable')
-			|| $this->getConfig('enable') === null && $this->app['config']->get('app.debug');
+			|| $this->getConfig('enable') === null && $this->app['config']->get('app.debug')
+			|| $this->getConfig('requests.on_demand');
 	}
 
 	// Check whether we are collecting data
